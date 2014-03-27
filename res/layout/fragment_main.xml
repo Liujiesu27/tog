@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.su27.tog.MainActivity$PlaceholderFragment" >
+
+    <Button android:id="@+id/bubble_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bubble_sort"
+        android:onClick="onClick"/>
+    <Button android:id="@+id/quick_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_sort"
+        android:onClick="onClick"/>
+    <Button android:id="@+id/merge_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/merge_sort"
+        android:onClick="onClick"/>
+    <Button android:id="@+id/select_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_sort"
+        android:onClick="onClick"/>
+
+</LinearLayout>
