@@ -2,6 +2,7 @@
 package com.su27.tog;
 
 import com.su27.tog.sort.BubbleSortActivity;
+import com.su27.tog.sort.InsertionSortActivity;
 import com.su27.tog.sort.MergeSortActivity;
 import com.su27.tog.sort.QuickSortActivity;
 import com.su27.tog.sort.SelectSortActivity;
@@ -89,6 +90,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 startActivity(intent);
             }
                 break;
+            case R.id.inertion_sort: {
+                Intent intent = new Intent(this, InsertionSortActivity.class);
+                startActivity(intent);
+            }
+            break;
         }
 
     }

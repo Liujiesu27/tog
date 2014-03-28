@@ -30,6 +30,8 @@
         </activity>
         <activity android:name="com.su27.tog.sort.SelectSortActivity" >
         </activity>
+        <activity android:name="com.su27.tog.sort.InsertionSortActivity" >
+        </activity>
     </application>
 
 </manifest>
