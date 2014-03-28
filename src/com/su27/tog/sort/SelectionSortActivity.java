@@ -4,7 +4,7 @@ package com.su27.tog.sort;
 import com.su27.tog.R;
 import com.su27.tog.SortBasicActivity;
 
-public class SelectSortActivity extends SortBasicActivity {
+public class SelectionSortActivity extends SortBasicActivity {
 
     @Override
     protected void sort(int[] array) {
@@ -25,4 +25,8 @@ public class SelectSortActivity extends SortBasicActivity {
         return getString(R.string.select_sort);
     }
 
+    @Override
+    protected String getAssetChartFile() {
+        return "selection_sort.gif";
+    }
 }

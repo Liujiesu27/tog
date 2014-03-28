@@ -3,10 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/tv_show"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <WebView
+            android:id="@+id/wv_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,11 +34,12 @@
             android:text="@string/display" />
 
         <Button
-            android:id="@+id/view2"
+            android:id="@+id/btn_chart"
             android:layout_width="0dip"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            android:text="@string/chart" />
 
         <Button
             android:id="@+id/view3"

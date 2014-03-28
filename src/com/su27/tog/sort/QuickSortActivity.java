@@ -52,6 +52,9 @@ public class QuickSortActivity extends SortBasicActivity {
         return getString(R.string.quick_sort);
     }
 
-    
+    @Override
+    protected String getAssetChartFile() {
+        return "quick_sort.gif";
+    }
 
 }

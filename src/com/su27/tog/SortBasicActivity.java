@@ -2,9 +2,12 @@
 package com.su27.tog;
 
 import android.app.Activity;
+import android.graphics.Movie;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -14,12 +17,14 @@ public abstract class SortBasicActivity extends Activity implements
     private static final String LOG_TAG = "SortBasicActivity";
 
     private TextView mTVShow;
+    private WebView mWVChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sort);
         mTVShow = (TextView) findViewById(R.id.tv_show);
+        mWVChart = (WebView) findViewById(R.id.wv_chart);
         setTitle(title());
     }
 
@@ -28,7 +33,14 @@ public abstract class SortBasicActivity extends Activity implements
 
         switch (v.getId()) {
             case R.id.btn_display:
+                mTVShow.setVisibility(View.VISIBLE);
+                mWVChart.setVisibility(View.GONE);
                 onDisplayClick(mTVShow);
+                break;
+            case R.id.btn_chart:
+                mTVShow.setVisibility(View.GONE);
+                mWVChart.setVisibility(View.VISIBLE);
+                onChartClick();
                 break;
         }
 
@@ -59,8 +71,10 @@ public abstract class SortBasicActivity extends Activity implements
     }
 
     protected abstract void sort(int[] array);
-    
+
     protected abstract String title();
+
+    protected abstract String getAssetChartFile();
 
     protected void onDisplayClick(TextView showView) {
         int[] array = getRandomArray(10, 100);
@@ -68,6 +82,13 @@ public abstract class SortBasicActivity extends Activity implements
         sort(array);
         String str2 = print(array);
         showView.setText(str1 + "\n" + str2);
+    }
+
+    protected void onChartClick() {
+        mWVChart.loadDataWithBaseURL(null,
+                "<center><img src='file:///android_asset/"
+                        + getAssetChartFile() + "'/></center>", "text/html",
+                "utf-8", null);
 
     }
 

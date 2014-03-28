@@ -24,4 +24,9 @@ public class BubbleSortActivity extends SortBasicActivity {
         }
     }
 
+    @Override
+    protected String getAssetChartFile() {
+        return "bubble_sort.gif";
+    }
+
 }

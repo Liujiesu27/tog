@@ -25,5 +25,10 @@ public class InsertionSortActivity extends SortBasicActivity {
     protected String title() {
         return getString(R.string.inertion_sort);
     }
+    
+    @Override
+    protected String getAssetChartFile() {
+        return "insertion_sort.gif";
+    }
 
 }

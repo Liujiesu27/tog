@@ -9,6 +9,8 @@
     <string name="merge_sort">归并排序</string>
     <string name="select_sort">选择排序</string>
     <string name="inertion_sort">插入排序</string>
+    <string name="shell_sort">希尔排序</string>
     <string name="display">显示</string>
+    <string name="chart">图示</string>
 
 </resources>

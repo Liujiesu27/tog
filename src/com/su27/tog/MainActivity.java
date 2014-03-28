@@ -5,7 +5,7 @@ import com.su27.tog.sort.BubbleSortActivity;
 import com.su27.tog.sort.InsertionSortActivity;
 import com.su27.tog.sort.MergeSortActivity;
 import com.su27.tog.sort.QuickSortActivity;
-import com.su27.tog.sort.SelectSortActivity;
+import com.su27.tog.sort.SelectionSortActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -86,7 +86,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 startActivity(intent);
             }
             case R.id.select_sort: {
-                Intent intent = new Intent(this, SelectSortActivity.class);
+                Intent intent = new Intent(this, SelectionSortActivity.class);
                 startActivity(intent);
             }
                 break;

@@ -48,4 +48,9 @@ public class MergeSortActivity extends SortBasicActivity {
             mergearray(unsort, l, r, mid, sort);
         }
     }
+    
+    @Override
+    protected String getAssetChartFile() {
+        return "merge_sort.gif";
+    }
 }
