@@ -30,5 +30,10 @@
         android:layout_height="wrap_content"
         android:text="@string/inertion_sort"
         android:onClick="onClick"/>
+    <Button android:id="@+id/shell_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shell_sort"
+        android:onClick="onClick"/>
 
 </LinearLayout>

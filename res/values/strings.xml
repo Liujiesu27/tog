@@ -12,5 +12,6 @@
     <string name="shell_sort">希尔排序</string>
     <string name="display">显示</string>
     <string name="chart">图示</string>
+    <string name="code">源码</string>
 
 </resources>

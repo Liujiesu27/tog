@@ -2,12 +2,11 @@
 package com.su27.tog;
 
 import android.app.Activity;
-import android.graphics.Movie;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.webkit.WebView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -18,6 +17,7 @@ public abstract class SortBasicActivity extends Activity implements
 
     private TextView mTVShow;
     private WebView mWVChart;
+    private ImageView mIVChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public abstract class SortBasicActivity extends Activity implements
         setContentView(R.layout.activity_sort);
         mTVShow = (TextView) findViewById(R.id.tv_show);
         mWVChart = (WebView) findViewById(R.id.wv_chart);
+        mIVChart = (ImageView) findViewById(R.id.iv_code);
         setTitle(title());
     }
 
@@ -35,12 +36,20 @@ public abstract class SortBasicActivity extends Activity implements
             case R.id.btn_display:
                 mTVShow.setVisibility(View.VISIBLE);
                 mWVChart.setVisibility(View.GONE);
+                mIVChart.setVisibility(View.GONE);
                 onDisplayClick(mTVShow);
                 break;
             case R.id.btn_chart:
                 mTVShow.setVisibility(View.GONE);
                 mWVChart.setVisibility(View.VISIBLE);
+                mIVChart.setVisibility(View.GONE);
                 onChartClick();
+                break;
+            case R.id.btn_code:
+                mTVShow.setVisibility(View.GONE);
+                mWVChart.setVisibility(View.GONE);
+                mIVChart.setVisibility(View.VISIBLE);
+                onCodeClick();
                 break;
         }
 
@@ -76,6 +85,8 @@ public abstract class SortBasicActivity extends Activity implements
 
     protected abstract String getAssetChartFile();
 
+    protected abstract int getCodeResId();
+
     protected void onDisplayClick(TextView showView) {
         int[] array = getRandomArray(10, 100);
         String str1 = print(array);
@@ -90,6 +101,10 @@ public abstract class SortBasicActivity extends Activity implements
                         + getAssetChartFile() + "'/></center>", "text/html",
                 "utf-8", null);
 
+    }
+
+    protected void onCodeClick() {
+        mIVChart.setImageResource(getCodeResId());
     }
 
 }

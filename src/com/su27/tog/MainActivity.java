@@ -6,6 +6,7 @@ import com.su27.tog.sort.InsertionSortActivity;
 import com.su27.tog.sort.MergeSortActivity;
 import com.su27.tog.sort.QuickSortActivity;
 import com.su27.tog.sort.SelectionSortActivity;
+import com.su27.tog.sort.ShellSortActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -92,6 +93,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 break;
             case R.id.inertion_sort: {
                 Intent intent = new Intent(this, InsertionSortActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case R.id.shell_sort: {
+                Intent intent = new Intent(this, ShellSortActivity.class);
                 startActivity(intent);
             }
             break;

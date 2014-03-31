@@ -34,6 +34,8 @@
         </activity>
         <activity android:name="com.su27.tog.sort.InsertionSortActivity" >
         </activity>
+        <activity android:name="com.su27.tog.sort.ShellSortActivity" >
+        </activity>
     </application>
 
 </manifest>

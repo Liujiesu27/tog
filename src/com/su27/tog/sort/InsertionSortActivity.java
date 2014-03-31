@@ -31,4 +31,8 @@ public class InsertionSortActivity extends SortBasicActivity {
         return "insertion_sort.gif";
     }
 
+    @Override
+    protected int getCodeResId() {
+        return R.drawable.code_insertion_sort;
+    }
 }

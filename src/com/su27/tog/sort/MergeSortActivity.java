@@ -8,14 +8,8 @@ public class MergeSortActivity extends SortBasicActivity {
 
     @Override
     protected void sort(int[] array) {
-
         int[] sort = new int[array.length];
         mergesort(array, 0, array.length, sort);
-    }
-
-    @Override
-    protected String title() {
-        return getString(R.string.merge_sort);
     }
 
     private void mergearray(int[] unsort, int l, int r, int mid, int[] sort) {
@@ -48,9 +42,19 @@ public class MergeSortActivity extends SortBasicActivity {
             mergearray(unsort, l, r, mid, sort);
         }
     }
-    
+
+    @Override
+    protected String title() {
+        return getString(R.string.merge_sort);
+    }
+
     @Override
     protected String getAssetChartFile() {
         return "merge_sort.gif";
+    }
+    
+    @Override
+    protected int getCodeResId() {
+        return R.drawable.code_merge_sort;
     }
 }
