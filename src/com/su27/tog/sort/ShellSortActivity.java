@@ -35,4 +35,9 @@ public class ShellSortActivity extends SortBasicActivity {
     protected int getCodeResId() {
         return R.drawable.code_shell_sort;
     }
+
+    @Override
+    protected String getAssetPrincipleFile() {
+        return "principle_shell_sort.html";
+    }
 }

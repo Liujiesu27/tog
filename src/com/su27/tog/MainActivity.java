@@ -86,6 +86,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 Intent intent = new Intent(this, MergeSortActivity.class);
                 startActivity(intent);
             }
+                break;
             case R.id.select_sort: {
                 Intent intent = new Intent(this, SelectionSortActivity.class);
                 startActivity(intent);
@@ -95,12 +96,12 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 Intent intent = new Intent(this, InsertionSortActivity.class);
                 startActivity(intent);
             }
-            break;
+                break;
             case R.id.shell_sort: {
                 Intent intent = new Intent(this, ShellSortActivity.class);
                 startActivity(intent);
             }
-            break;
+                break;
         }
 
     }

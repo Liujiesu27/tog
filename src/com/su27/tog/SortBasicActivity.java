@@ -17,7 +17,7 @@ public abstract class SortBasicActivity extends Activity implements
 
     private TextView mTVShow;
     private WebView mWVChart;
-    private ImageView mIVChart;
+    private ImageView mIVCode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,34 +25,41 @@ public abstract class SortBasicActivity extends Activity implements
         setContentView(R.layout.activity_sort);
         mTVShow = (TextView) findViewById(R.id.tv_show);
         mWVChart = (WebView) findViewById(R.id.wv_chart);
-        mIVChart = (ImageView) findViewById(R.id.iv_code);
+        mIVCode = (ImageView) findViewById(R.id.iv_code);
         setTitle(title());
+        initView();
+    }
+
+    private void initView() {
+        hideViews();
+        onPrincipleClick();
     }
 
     @Override
     public void onClick(View v) {
 
+        hideViews();
         switch (v.getId()) {
             case R.id.btn_display:
-                mTVShow.setVisibility(View.VISIBLE);
-                mWVChart.setVisibility(View.GONE);
-                mIVChart.setVisibility(View.GONE);
-                onDisplayClick(mTVShow);
+                onDisplayClick();
                 break;
             case R.id.btn_chart:
-                mTVShow.setVisibility(View.GONE);
-                mWVChart.setVisibility(View.VISIBLE);
-                mIVChart.setVisibility(View.GONE);
                 onChartClick();
                 break;
             case R.id.btn_code:
-                mTVShow.setVisibility(View.GONE);
-                mWVChart.setVisibility(View.GONE);
-                mIVChart.setVisibility(View.VISIBLE);
                 onCodeClick();
+                break;
+            case R.id.btn_principle:
+                onPrincipleClick();
                 break;
         }
 
+    }
+
+    private void hideViews() {
+        mTVShow.setVisibility(View.GONE);
+        mWVChart.setVisibility(View.GONE);
+        mIVCode.setVisibility(View.GONE);
     }
 
     protected int[] getRandomArray(int length, int max) {
@@ -85,17 +92,21 @@ public abstract class SortBasicActivity extends Activity implements
 
     protected abstract String getAssetChartFile();
 
+    protected abstract String getAssetPrincipleFile();
+
     protected abstract int getCodeResId();
 
-    protected void onDisplayClick(TextView showView) {
+    protected void onDisplayClick() {
+        mTVShow.setVisibility(View.VISIBLE);
         int[] array = getRandomArray(10, 100);
         String str1 = print(array);
         sort(array);
         String str2 = print(array);
-        showView.setText(str1 + "\n" + str2);
+        mTVShow.setText(str1 + "\n" + str2);
     }
 
     protected void onChartClick() {
+        mWVChart.setVisibility(View.VISIBLE);
         mWVChart.loadDataWithBaseURL(null,
                 "<center><img src='file:///android_asset/"
                         + getAssetChartFile() + "'/></center>", "text/html",
@@ -104,7 +115,13 @@ public abstract class SortBasicActivity extends Activity implements
     }
 
     protected void onCodeClick() {
-        mIVChart.setImageResource(getCodeResId());
+        mIVCode.setVisibility(View.VISIBLE);
+        mIVCode.setImageResource(getCodeResId());
+    }
+
+    protected void onPrincipleClick() {
+        mWVChart.setVisibility(View.VISIBLE);
+        mWVChart.loadUrl("file:///android_asset/" + getAssetPrincipleFile());
     }
 
 }

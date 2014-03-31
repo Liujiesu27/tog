@@ -13,5 +13,6 @@
     <string name="display">显示</string>
     <string name="chart">图示</string>
     <string name="code">源码</string>
+    <string name="principle">原理</string>
 
 </resources>

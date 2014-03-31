@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body>
+<p style="line-height:150%" align="left">
+<font size="4">基本思想<br></font>
+先取一个小于n的整数d1作为第一个增量，把文件的全部记录分成d1个组。所有距离为dl的倍数的记录放在同一个组中。<br>先在各组内进行直接插人排序；然后，取第二个增量d2&lt;d1重复上述的分组和排序，直至所取的增量dt=1(dt&lt;dt-l&lt;…&lt;d2&lt;d1)，即所有记录放在同一组中进行直接插入排序为止。<br>该方法实质上是一种分组插入方法。
+</p>
+<p style="line-height:150%" align="left">
+<font size="4">最差时间复杂度<br></font>
+根据步长串行的不同而不同。 已知最好的:O(nlog^2n)
+</p>
+<p style="line-height:150%" align="left">
+<font size="4">最优时间复杂度<br></font>
+O(n)
+</p>
+<p style="line-height:150%" align="left">
+<font size="4">平均时间复杂度<br></font>
+根据步长串行的不同而不同。
+</p>
+<p style="line-height:150%" align="left">
+<font size="4">最差空间复杂度<br></font>
+O(n)
+</p>
+<p style="line-height:150%" align="left">
+<font size="4">稳定性<br></font>
+不稳定
+</p>
+</body>
+</html>

@@ -33,4 +33,9 @@ public class SelectionSortActivity extends SortBasicActivity {
     protected int getCodeResId() {
         return R.drawable.code_selection_sort;
     }
+
+    @Override
+    protected String getAssetPrincipleFile() {
+        return "principle_selection_sort.html";
+    }
 }

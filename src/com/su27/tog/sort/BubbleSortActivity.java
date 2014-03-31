@@ -34,4 +34,9 @@ public class BubbleSortActivity extends SortBasicActivity {
         return R.drawable.code_bubble_sort;
     }
 
+    @Override
+    protected String getAssetPrincipleFile() {
+        return "principle_bubble_sort.html";
+    }
+
 }

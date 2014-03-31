@@ -35,4 +35,9 @@ public class InsertionSortActivity extends SortBasicActivity {
     protected int getCodeResId() {
         return R.drawable.code_insertion_sort;
     }
+
+    @Override
+    protected String getAssetPrincipleFile() {
+        return "principle_insertion_sort.html";
+    }
 }

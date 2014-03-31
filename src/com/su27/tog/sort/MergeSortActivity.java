@@ -57,4 +57,9 @@ public class MergeSortActivity extends SortBasicActivity {
     protected int getCodeResId() {
         return R.drawable.code_merge_sort;
     }
+
+    @Override
+    protected String getAssetPrincipleFile() {
+        return "principle_merge_sort.html";
+    }
 }

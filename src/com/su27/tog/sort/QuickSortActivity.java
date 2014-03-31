@@ -61,4 +61,9 @@ public class QuickSortActivity extends SortBasicActivity {
     protected int getCodeResId() {
         return R.drawable.code_quick_sort;
     }
+
+    @Override
+    protected String getAssetPrincipleFile() {
+        return "principle_quick_sort.html";
+    }
 }
