@@ -5,35 +5,51 @@
     android:orientation="vertical"
     tools:context="com.su27.tog.MainActivity$PlaceholderFragment" >
 
-    <Button android:id="@+id/bubble_sort"
+    <Button
+        android:id="@+id/bubble_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bubble_sort"
-        android:onClick="onClick"/>
-    <Button android:id="@+id/quick_sort"
+        android:onClick="onClick"
+        android:text="@string/bubble_sort" />
+
+    <Button
+        android:id="@+id/quick_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/quick_sort"
-        android:onClick="onClick"/>
-    <Button android:id="@+id/merge_sort"
+        android:onClick="onClick"
+        android:text="@string/quick_sort" />
+
+    <Button
+        android:id="@+id/merge_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/merge_sort"
-        android:onClick="onClick"/>
-    <Button android:id="@+id/select_sort"
+        android:onClick="onClick"
+        android:text="@string/merge_sort" />
+
+    <Button
+        android:id="@+id/select_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/select_sort"
-        android:onClick="onClick"/>
-    <Button android:id="@+id/inertion_sort"
+        android:onClick="onClick"
+        android:text="@string/select_sort" />
+
+    <Button
+        android:id="@+id/inertion_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/inertion_sort"
-        android:onClick="onClick"/>
-    <Button android:id="@+id/shell_sort"
+        android:onClick="onClick"
+        android:text="@string/inertion_sort" />
+
+    <Button
+        android:id="@+id/shell_sort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/shell_sort"
-        android:onClick="onClick"/>
+        android:onClick="onClick"
+        android:text="@string/shell_sort" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/sorts" />
 
 </LinearLayout>

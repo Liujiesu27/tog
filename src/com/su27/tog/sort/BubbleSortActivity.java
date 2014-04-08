@@ -8,12 +8,15 @@ public class BubbleSortActivity extends SortBasicActivity {
 
     protected void sort(int[] array) {
         if (array != null && array.length > 0) {
-            for (int i = 1; i < array.length; i++) {
+            boolean exchange = true;
+            for (int i = 1; i < array.length && exchange; i++) {
+                exchange = false;
                 for (int j = 0; j < array.length - i; j++) {
                     if (array[j] < array[j + 1]) {
                         int temp = array[j + 1];
                         array[j + 1] = array[j];
                         array[j] = temp;
+                        exchange = true;
                     }
                 }
             }
